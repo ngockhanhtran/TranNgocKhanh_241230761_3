@@ -1,0 +1,44 @@
+@model TranNgocKhanh_241230761_3.Models.TaiSan
+
+@{
+    ViewData["Title"] = "Them tai san moi";
+}
+
+<h1>Tran Ngoc Khanh</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger" style="color:red"></div>
+
+            <div class="margin-bottom: 12px">
+                <label asp-for="MaLoai" class="control-label"></label>
+                <select asp-for="MaLoai" asp-items="ViewBag.MaLoai"></select>
+            </div>
+
+            <div class="margin-bottom: 12px">
+                <label asp-for="TenTs" class="control-label"></label>
+                <input asp-for="TenTs" class="form-control" />
+                <span asp-validation-for="TenTs" class="text-danger" style="color:red"></span>
+            </div>
+
+            <div class="margin-bottom: 12px">
+                <label asp-for="NguyenGia" class="control-label"></label>
+                <input asp-for="NguyenGia" class="form-control" />
+                <span asp-validation-for="NguyenGia" class="text-danger" style="color:red"></span>
+            </div>
+
+            <div class="margin-bottom: 12px">
+                <label asp-for="Anh" class="control-label"></label>
+                <input asp-for="Anh" class="form-control" />
+                <span asp-validation-for="Anh" class="text-danger" style="color:red"></span>
+            </div>
+                <input type="submit" value="Create" class="btn btn-primary" />
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
